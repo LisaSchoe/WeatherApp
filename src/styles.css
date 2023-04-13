@@ -1,6 +1,6 @@
 body {
   font-family: "Amatic SC", cursive;
-  background-image: url("images/cloud");
+  background-image: "https: //s3.amazonaws.com/shecodesio-production/uploads/files/000/076/819/original/cloud.jpg?1681378594";
   background-color: #cccccc;
   height: 500px;
   background-position: center;

@@ -1,0 +1,46 @@
+body {
+  font-family: "Amatic SC", cursive;
+  background-image: url("images/cloud");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.shownWeather {
+  display: block;
+}
+h2 {
+  text-align: center;
+  display: block;
+  color: beige;
+  margin: auto;
+  padding: 10px;
+}
+li {
+  list-style: none;
+  text-align: center;
+  color: beige;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: 900;
+  color: burlywood;
+  position: relative;
+}
+button{
+display: block;
+text-align: center;
+
+}
+.row height d-flex justify-content-center align-items-center {
+  padding: 20px auto;
+  margin: 20px auto;
+}
+.card-title1 {
+  display: block;
+  text-align: center;
+  font-size: 34 px;
+}

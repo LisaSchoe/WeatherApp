@@ -1,10 +1,10 @@
 body {
   font-family: "Amatic SC", cursive;
-  background-image: "https: //s3.amazonaws.com/shecodesio-production/uploads/files/000/076/819/original/cloud.jpg?1681378594";
+  background-image: url("images/clouds.jpg");
   background-color: #cccccc;
   height: 500px;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-size: cover;
 }
 .shownWeather {

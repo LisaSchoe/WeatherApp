@@ -44,3 +44,16 @@ text-align: center;
   text-align: center;
   font-size: 34 px;
 }
+
+.card-deck-5 {
+  text-align:center;
+}
+.row {
+  width: 50%;
+  text-align: center;
+  display: flex;
+}
+
+.GithubLink {
+  text-align: left;
+}

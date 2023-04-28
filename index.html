@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
       rel="stylesheet"
     />
-// <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -51,9 +51,9 @@
           <div class="col">
             <span class="parameters">
         <ul>
-            <li id="precipitacion"> Precipitation: 0% </li>
-            <li id="humidity"> Humidity: 74% </li>
-            <li id="wind"> Wind: 2 km/h </li>
+            <li> Precipitation: <span id="precipitation"></span>%</li>
+            <li> Humidity: <span id= "humidity"></span>%</li>
+            <li> Wind: <span id="wind"></span> km/h </li>
         </ul>
             </span>
         </div>
@@ -80,43 +80,44 @@
         <button class="form-control shadow-sm w-10" id="current-position">Current Position </button>
         </div>
        
-      <div class="container">
+      <div class="forecast">
+        <div class="container text-center">
         <div class="row">
+
         <div class="col">
-          <div class="card">
-            <div class="card-body">
               <h5 class="card-title"> ☀ <br> Monday</h5>
-              <p class="card-text">5° C</p>
+              <span class="forecast-temp-max">20°</span>
+              <span class="forecast-temp-min">15°</span>
             </div>
-          </div>
+
           <div class="col">
-            <div class="card">
-            <div class="card-body">
               <h5 class="card-title"> ☀ <br> Tuesday</h5>
-              <p class="card-text">6° C</p>
+          <span class="forecast-temp-max">20°</span>
+          <span class="forecast-temp-min">15°</span>
             </div>
-          </div>
+<div class="row">
           <div class="col">
-            <div class="card">
-            <div class="card-body">
               <h5 class="card-title"> ☀ <br> Wednesday</h5>
-              <p class="card-text">7° C</p>
+          <span class="forecast-temp-max">20°</span>
+          <span class="forecast-temp-min">15°</span>
             </div>
+
             <div class="col">
-            <div class="card">
-                <div class="card-body">
                   <h5 class="card-title"> ☀ <br> Thursday</h5>
-                  <p class="card-text">8° C</p>
-            </div>
+          <span class="forecast-temp-max">20°</span>
+          <span class="forecast-temp-min">15°</span>
+                </div>
+
             <div class="col">
-                <div class="card">
-                <div class="card-body">
                   <h5 class="card-title"> ☀ <br> Friday</h5>
-                    <p class="card-text">5° C</p>
+          <span class="forecast-temp-max">20°</span>
+          <span class="forecast-temp-min">15°</span>
+                </div>
             </div>
             </div>
           </div>
-        </div>
+          </div>
+
     </div>
     <div class="GithubLink">
     <a href="https://github.com/LisaSchoe/WeatherApp" target="_blank" >Find my code on Github </a>

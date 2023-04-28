@@ -25,7 +25,7 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatTime(currentTime);
 
-//homework week 5
+//28.04.2023: tryed to integrate the shecodes API & deactivated the current position button
 
 function searchEngine(event) {
   event.preventDefault();
@@ -38,7 +38,7 @@ function searchEngine(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchEngine);
 
-function showCurrentCity(response) {
+function showCurrentWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   //let temperature = Math.round(response.temperature.current);
   let newTemperature = document.querySelector("#actual-temperature");
@@ -49,6 +49,10 @@ function showCurrentCity(response) {
   let description = response.data.weather[0].description;
   let actualWeather = document.querySelector("#actual-weather");
   actualWeather.innerHTML = description;
+  let humidityElement= document.querySelector("#humidity");
+  humidityElement.innerHTML=response.data.main.humidity;
+  let windElement=document.querySelector("#wind");
+  windElement.innerHTML=Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {
@@ -56,7 +60,7 @@ function searchCity(city) {
   //let apiKey = "71f7cat30a6cf389806bfoc7abe425bf";
   //let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showCurrentCity);
+  axios.get(apiUrl).then(showCurrentWeather);
 }
 
 function handleSubmit(event) {

@@ -76,4 +76,16 @@ text-align: center;
   border-radius: 5px;
   padding: 10px auto;
   margin: 10px auto;
+  max-width: 70%;
 }
+
+
+
+.icon{
+  text-align: center;
+}
+
+.forecast{
+  color: white;
+}
+

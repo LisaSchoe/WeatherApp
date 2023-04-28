@@ -1,13 +1,17 @@
-function formatTime(date) {
+
+
+
+//calculate the time
+function formatDate(timestamp){
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = date.getMinutes ();
   if (minutes < 10) {
-    minutes = `0${minutes}`;
+    minutes= `0${minutes}`;
   }
-  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -17,13 +21,9 @@ function formatTime(date) {
     "Friday",
     "Saturday"
   ];
-  let day = days[dayIndex];
-  return `${day} ${hours}:${minutes}`;
+  let day = days [date.getDay()];
+return `${day} ${hours}:${minutes}`;
 }
-
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatTime(currentTime);
 
 //28.04.2023: tryed to integrate the shecodes API & deactivated the current position button
 
@@ -53,6 +53,8 @@ function showCurrentWeather(response) {
   humidityElement.innerHTML=response.data.main.humidity;
   let windElement=document.querySelector("#wind");
   windElement.innerHTML=Math.round(response.data.wind.speed);
+  let dateElement = document.querySelector("#date");
+dateElement.innerHTML=formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {

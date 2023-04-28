@@ -40,6 +40,7 @@ form.addEventListener("submit", searchEngine);
 
 function showCurrentCity(response) {
   let temperature = Math.round(response.data.main.temp);
+  //let temperature = Math.round(response.temperature.current);
   let newTemperature = document.querySelector("#actual-temperature");
   newTemperature.innerHTML = `${temperature}°C`;
   let city = response.data.name;
@@ -52,6 +53,8 @@ function showCurrentCity(response) {
 
 function searchCity(city) {
   let apiKey = "9dcac54d8c9cb2536e0192a2590e2dc6";
+  //let apiKey = "71f7cat30a6cf389806bfoc7abe425bf";
+  //let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentCity);
 }
@@ -62,21 +65,21 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function searchLocation(position) {
-  let apiKey = "9dcac54d8c9cb2536e0192a2590e2dc6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showCurrentCity);
-}
+//function searchLocation(position) {
+ // let apiKey = "71f7cat30a6cf389806bfoc7abe425bf";
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  //axios.get(apiUrl).then(showCurrentCity);
+//}
 
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
+//function getCurrentPosition(event) {
+//  event.preventDefault();
+//  navigator.geolocation.getCurrentPosition(searchLocation);
+//}
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let currentPositionButton = document.querySelector("#current-position");
-currentPositionButton.addEventListener("click", getCurrentPosition);
+//let currentPositionButton = document.querySelector("#current-position");
+//currentPositionButton.addEventListener("click", getCurrentPosition);
 
 searchCity("Quito");

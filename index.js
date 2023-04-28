@@ -39,6 +39,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchEngine);
 
 function showCurrentWeather(response) {
+  console.log (response.data);
   let temperature = Math.round(response.data.main.temp);
   //let temperature = Math.round(response.temperature.current);
   let newTemperature = document.querySelector("#actual-temperature");
@@ -55,6 +56,8 @@ function showCurrentWeather(response) {
   windElement.innerHTML=Math.round(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
 dateElement.innerHTML=formatDate(response.data.dt * 1000);
+let iconElement= document.querySelector("#icon");
+iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function searchCity(city) {

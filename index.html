@@ -29,7 +29,7 @@
 
     <div class="shownWeather">
       <div class="container text-center">
-        <div class="row align-items-start">
+        <div class="row w-100">
           
           <div class="col">
           <h2 id="city"></h2>
@@ -53,20 +53,19 @@
           <div class="col">
             <span class="parameters">
         <ul>
-            <li> Precipitation: <span id="precipitation"></span>%</li>
+          <br/>
             <li> Humidity: <span id= "humidity"></span>%</li>
             <li> Wind: <span id="wind"></span> km/h </li>
         </ul>
             </span>
         </div>
-
         </div>
         </div>
         </div>  
   
-      <form class="search-form" id="search-form">
+      <form class="mb-5" id="search-form">
         <div class="row">
-          <div class = "col-9">
+          <div class = "col-10">
             <input
                 type="text"
                 placeholder="Change city..."
@@ -76,15 +75,16 @@
                 class="form-control shadow-sm"
               />
             </div>
+            <div class="col-2">
+              <input type="submit" value="Search" class="btn btn-primary w-100" />
+            </div>
           </div>
         </div>
-        <div class = "col-9">
-        <button class="form-control shadow-sm w-10" id="current-position">Current Position </button>
-        </div>
+        
        
       <div class="forecast">
         <div class="container text-center">
-        <div class="row">
+        <div class="row w-100">
 
         <div class="col">
               <h5 class="card-title"> ☀ <br> Monday</h5>
@@ -97,8 +97,9 @@
           <span class="forecast-temp-max">20°</span>
           <span class="forecast-temp-min">15°</span>
             </div>
-<div class="row">
-          <div class="col">
+
+
+            <div class="col">
               <h5 class="card-title"> ☀ <br> Wednesday</h5>
           <span class="forecast-temp-max">20°</span>
           <span class="forecast-temp-min">15°</span>
@@ -115,7 +116,6 @@
           <span class="forecast-temp-max">20°</span>
           <span class="forecast-temp-min">15°</span>
                 </div>
-            </div>
             </div>
           </div>
           </div>

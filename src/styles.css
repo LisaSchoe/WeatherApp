@@ -2,7 +2,6 @@ body {
   font-family: "Amatic SC", cursive;
   background-image: url("../images/clouds.jpg");
   background-color: #cccccc;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -40,24 +39,6 @@ h1 {
   padding: 20px;
 }
 
-button{
-display: block;
-text-align: center;
-
-}
-.row height d-flex justify-content-center align-items-center {
-  padding: 20px auto;
-  margin: 20px auto;
-}
-.card-title1 {
-  display: block;
-  text-align: center;
-  font-size: 34 px;
-}
-
-.card-deck-5 {
-  text-align:center;
-}
 .row {
   width: 50%;
   text-align: center;
@@ -78,7 +59,6 @@ text-align: center;
   margin: 10px auto;
   max-width: 70%;
 }
-
 
 
 .icon{

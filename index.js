@@ -25,8 +25,6 @@ function formatDate(timestamp){
 return `${day} ${hours}:${minutes}`;
 }
 
-//28.04.2023: tryed to integrate the shecodes API & deactivated the current position button
-
 function searchEngine(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
@@ -41,7 +39,6 @@ form.addEventListener("submit", searchEngine);
 function showCurrentWeather(response) {
   console.log (response.data);
   let temperature = Math.round(response.data.main.temp);
-  //let temperature = Math.round(response.temperature.current);
   let newTemperature = document.querySelector("#actual-temperature");
   newTemperature.innerHTML = `${temperature}°C`;
   let city = response.data.name;
@@ -55,15 +52,13 @@ function showCurrentWeather(response) {
   let windElement=document.querySelector("#wind");
   windElement.innerHTML=Math.round(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
-dateElement.innerHTML=formatDate(response.data.dt * 1000);
-let iconElement= document.querySelector("#icon");
-iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  dateElement.innerHTML=formatDate(response.data.dt * 1000);
+  let iconElement= document.querySelector("#icon");
+  iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function searchCity(city) {
   let apiKey = "9dcac54d8c9cb2536e0192a2590e2dc6";
-  //let apiKey = "71f7cat30a6cf389806bfoc7abe425bf";
-  //let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentWeather);
 }
@@ -74,21 +69,19 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-//function searchLocation(position) {
- // let apiKey = "71f7cat30a6cf389806bfoc7abe425bf";
-  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  //axios.get(apiUrl).then(showCurrentCity);
-//}
-
-//function getCurrentPosition(event) {
-//  event.preventDefault();
-//  navigator.geolocation.getCurrentPosition(searchLocation);
-//}
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-//let currentPositionButton = document.querySelector("#current-position");
-//currentPositionButton.addEventListener("click", getCurrentPosition);
-
 searchCity("Quito");
+
+
+function displayFahrenheitTemperature(event){
+  event.preventDefault();
+  let newTemperature = document.querySelector("#actual-temperature");
+  let fahrenheitTemperature = (newTemperature * 9)/ 5 + 32;
+  alert (fahrenheitTemperature);
+  temperatureElement.innerHTML= Math.round(fahrenheitTemperature); 
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

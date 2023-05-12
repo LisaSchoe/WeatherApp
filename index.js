@@ -75,13 +75,3 @@ searchForm.addEventListener("submit", handleSubmit);
 searchCity("Quito");
 
 
-function displayFahrenheitTemperature(event){
-  event.preventDefault();
-  let newTemperature = document.querySelector("#actual-temperature");
-  let fahrenheitTemperature = (newTemperature * 9)/ 5 + 32;
-  alert (fahrenheitTemperature);
-  temperatureElement.innerHTML= Math.round(fahrenheitTemperature); 
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

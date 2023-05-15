@@ -72,8 +72,8 @@ function handleSubmit(event) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   
-  let forecastHTML= `<div class="row">`;
-  let days = ["Thu","Fri"];
+  let forecastHTML= `<div class="row w-100">`;
+  let days = ["Thu","Fri","Sat"];
   days.forEach(function(day){
   forecastHTML = forecastHTML + `
         <div class="col-2">

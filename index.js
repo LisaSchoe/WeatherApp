@@ -69,9 +69,33 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  
+  let forecastHTML= `<div class="row">`;
+  let days = ["Thu","Fri"];
+  days.forEach(function(day){
+  forecastHTML = forecastHTML + `
+        <div class="col-2">
+      <div class="weather-forecast-date">Monday</div>
+      <img src="☀"
+      alt=""
+      width=""/>
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-max"> 18° </span>
+        <span class="weather-forecast-temperature-min"> 15° </span>
+      </div>
+    </div>
+  </div>`;
+  })
+
+  forecastHTML=forecastHTML + `</div>`;
+  forecastElement.innerHTML=forecastHTML;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Quito");
-
+displayForecast();
 

@@ -4,6 +4,7 @@ body {
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 }
 
 
@@ -45,10 +46,6 @@ h1 {
   display: flex;
 }
 
-.GithubLink {
-  text-align: left;
-}
-
 .shownWeather {
   border: solid;
   border-style: round;
@@ -65,7 +62,15 @@ h1 {
   text-align: center;
 }
 
-.forecast {
+.weather-forecast {
   color: white;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 

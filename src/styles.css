@@ -40,11 +40,7 @@ h1 {
   padding: 20px;
 }
 
-.row {
-  width: 50%;
-  text-align: center;
-  display: flex;
-}
+
 
 .shownWeather {
   border: solid;
@@ -69,7 +65,7 @@ h1 {
 
 .weather-forecast {
   color: white;
-  margin-top: 20px;
+  margin-top: 5px;
   text-align: center;
 }
 .weather-forecast-date {
@@ -79,4 +75,6 @@ h1 {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+
+
 
